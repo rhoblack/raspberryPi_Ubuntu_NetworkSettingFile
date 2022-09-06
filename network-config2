@@ -1,16 +1,23 @@
-version: 2
-ethernets:
-  eth0:
-    dhcp4: true
-    optional: true
-wifis:
-  wlan0:
-    access-points:
-      "class-603-3":
-        password: "12345678#"
-    addresses:
-      - 10.10.16.201/24
-    gateway4: 10.10.16.254
-    nameservers:
-      addresses: [8.8.8.8]
-    optional: true
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: true
+            optional: true
+    version: 2
+    wifis:
+        wlan0:
+            access-points:
+                class-603-3:
+                    password: 12345678#
+            addresses:
+            - 10.10.16.201/24
+            gateway4: 10.10.16.254
+            nameservers:
+                addresses:
+                - 8.8.8.8
+            optional: true
